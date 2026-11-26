@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Barra Gourmet Ready · OKIN</title>
+  <meta name="description" content="Barra de doble fermentación, cocida al 100 %. Se sirve tras 30 minutos de descongelación, sin horno. Ref. P146A · 250 g · 45 cm · 32 unidades por caja.">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/zjp0tcy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap">
+  <link rel="preload" href="assets/fonts/SerialB-RegularBlur.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Iconos: Material Symbols (Google Fonts Icons), subconjunto: icon_names en orden alfabético -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0..1,0&icon_names=ac_unit,add,arrow_back,arrow_downward,arrow_forward,bakery_dining,call,check,close,compare_arrows,description,download,expand_more,info,inventory_2,local_fire_department,local_shipping,lock,open_in_new,photo_camera,qr_code_2,remove,restaurant,search,swap_vert,timer,tune&display=block">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/paginas.css">
+  <link rel="stylesheet" href="assets/css/ficha.css">
+</head>
+<body class="page page--white page--ficha" data-slug="barra-gourmet-ready">
+
+<!--@HEADER:start-->
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ CABECERA v0.4 ============
+     Sigue la propuesta «okin diseño» (diap. 2):
+       · Menú superior secundario: Delegación Madrid · Trabaja con nosotros · Contacto · Área clientes · idioma
+       · Menú principal: Panes · Inspiración · Sobre OKIN · Actualidad
+       · Panes recoge los tres recorridos: por canal, por ocasión y por familia
+     Cambios frente a la v0.2: «Soluciones» pasa a Panes › Por canal (seis perfiles),
+     «Biblioteca» pasa a Inspiración y «Actualidad» es un enlace directo.
+     ========================================= -->
+<header class="site-header" id="header">
+  <div class="topbar">
+    <p class="topbar__claim">Panaderos en Zumaia desde 1994</p>
+    <nav class="topbar__nav" aria-label="Secundario">
+      <a class="t-link" href="https://www.okin.es/delegacion-madrid">Delegación Madrid</a>
+      <a class="t-link" href="https://www.okin.es/trabaja-con-nosotros">Trabaja con nosotros</a>
+      <a class="t-link" href="https://www.okin.es/contacto">Contacto</a>
+      <div class="pop-wrap">
+        <button class="t-link u-area" aria-expanded="false" aria-controls="pop-area" data-pop="area">
+          <span class="ms" aria-hidden="true">lock</span>Área clientes
+        </button>
+        <div class="pop pop--area" id="pop-area" hidden>
+          <p class="pop__title">Área clientes</p>
+          <p>Para clientes con cuenta OKIN: pedidos, fichas técnicas, facturas, albaranes, material comercial y promociones.</p>
+          <a class="btn btn--brown btn--sm" href="#login"><span class="btn__label">Entrar</span><span class="btn__icon" aria-hidden="true"><span class="ms">arrow_forward</span></span></a>
+          <a class="pop__aside" href="https://www.okin.es/contacto">¿Aún no tienes acceso? Solicítalo</a>
+        </div>
+      </div>
+      <div class="pop-wrap">
+        <button class="t-link u-lang" aria-expanded="false" aria-controls="pop-lang" data-pop="lang" aria-label="Idioma: español">ES<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+        <div class="pop pop--lang" id="pop-lang" hidden>
+          <a href="#" aria-current="true">Español</a><a href="https://www.okin.es/en" lang="en">English</a><a href="https://www.okin.es/fr" lang="fr">Français</a><a href="https://www.okin.es/it" lang="it">Italiano</a><a href="https://www.okin.es/de" lang="de">Deutsch</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="hdr">
+    <a class="brand" href="index.html" aria-label="OKIN, inicio">
+      <img class="brand__light" src="assets/brand/okin-blanco.png" alt="OKIN" width="900" height="313">
+      <img class="brand__dark" src="assets/brand/okin-negro.png" alt="" width="900" height="313">
+    </a>
+
+    <nav class="doors" aria-label="Principal">
+      <button class="door" aria-expanded="false" aria-controls="panel-panes" data-panel="panes">Panes<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+      <button class="door" aria-expanded="false" aria-controls="panel-inspiracion" data-panel="inspiracion">Inspiración<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+      <button class="door" aria-expanded="false" aria-controls="panel-okin" data-panel="okin">Sobre OKIN<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+      <a class="door" href="https://www.okin.es/blog">Actualidad</a>
+    </nav>
+
+    <div class="utils">
+      <button class="u-search" id="searchBtn" aria-expanded="false" aria-controls="search" aria-label="Buscar pan o referencia" title="Buscar pan o referencia (/)">
+        <span class="ms" aria-hidden="true">search</span>
+      </button>
+      <a class="btn btn--yellow btn--hdr" href="index.html#recomendador">
+        <span class="btn__label">Encontrar mi pan</span>
+        <span class="btn__icon" aria-hidden="true"><span class="ms">arrow_forward</span></span>
+      </a>
+    </div>
+
+    <div class="hdr__mob">
+      <button class="m-icon" id="searchBtnM" aria-label="Buscar pan o referencia" aria-controls="search" aria-expanded="false">
+        <span class="ms" aria-hidden="true">search</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menú</button>
+    </div>
+  </div>
+
+  <!-- ---------- Paneles (escritorio) ---------- -->
+  <div class="panels">
+    <section class="panel" id="panel-panes" aria-label="Panes" hidden>
+      <div class="panel__in">
+        <div class="panel__intro">
+          <p class="panel__kicker">Panes</p>
+          <p class="panel__lead">Más de 200 referencias de pan precocido congelado. Búscalas por tu tipo de negocio, por el momento en que las sirves o por familia.</p>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Por canal</p>
+          <a href="https://www.okin.es/horeca">Horeca</a><a href="#">Retail</a><a href="#">Marca de distribuidor</a><a href="#">Distribución</a><a href="#">Exportación</a><a href="#">Industria</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Por ocasión</p>
+          <a href="panes.html?ocasion=desayuno">Desayunos</a><a href="panes.html?ocasion=brunch">Brunch</a><a href="panes.html?ocasion=bocadillo">Bocadillos</a><a href="panes.html?ocasion=pintxo">Pintxos y tapas</a><a href="panes.html?ocasion=mesa">Menú del día</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Por familia</p>
+          <a href="panes.html?familia=rustikos">Rustikos</a><a href="panes.html?familia=gastro">Gastro</a><a href="panes.html?familia=premiere">Premiere</a><a href="panes.html?preparacion=ready">Gourmet Ready</a><a href="panes.html?familia=zereal">Zereal</a><a href="#">Todas las familias</a>
+        </div>
+        <a class="panel__card" href="producto-barra-gourmet-ready.html">
+          <figure><img src="assets/img/barra-ready-1.jpg" alt="" loading="lazy"></figure>
+          <span class="panel__card-tag">Novedad</span>
+          <b>Barra Gourmet Ready</b>
+          <span>Se sirve tras 30 min de descongelación. Sin horno.</span>
+        </a>
+      </div>
+      <div class="panel__foot">
+        <a href="panes.html" class="panel__all">Ver todos los panes <span class="ms" aria-hidden="true">arrow_forward</span></a>
+        <a href="index.html#recomendador" data-close>¿Necesitas ayuda para elegir tu pan? <u>Encontrar mi pan</u></a>
+        <a href="https://www.okin.es/descargar-catalogos">Descargas: catálogos y fichas técnicas</a>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-inspiracion" aria-label="Inspiración" hidden>
+      <div class="panel__in">
+        <div class="panel__intro">
+          <p class="panel__kicker">Inspiración</p>
+          <p class="panel__lead">Ideas para servir y vender más pan: recetas, momentos de consumo y guías prácticas.</p>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Recetas</p>
+          <a href="#">Desayunos y brunch</a><a href="#">Bocadillos</a><a href="#">Pintxos y tapas</a><a href="#">Todas las recetas</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Guías</p>
+          <a href="#">Descongelar y servir</a><a href="#">Hornear en su punto</a><a href="#">Conservar el pan</a><a href="#">Vender pan en tienda</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Biblioteca</p>
+          <a href="#">Informes</a><a href="#">Estudios de mercado</a><a href="#">Tendencias</a>
+        </div>
+        <a class="panel__card" href="#">
+          <figure><img src="assets/img/okin-desayuno-variado.jpg" alt="" loading="lazy"></figure>
+          <span class="panel__card-tag">Momentos OKIN</span>
+          <b>El pan del desayuno</b>
+          <span>Cómo lo sirven nuestros clientes, de la tostada al bocadillo.</span>
+        </a>
+      </div>
+      <div class="panel__foot">
+        <a href="#">Ver toda la inspiración <span class="ms" aria-hidden="true">arrow_forward</span></a>
+        <a href="#">Momentos OKIN</a>
+        <a href="#">Sala de prensa</a>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-okin" aria-label="Sobre OKIN" hidden>
+      <div class="panel__in">
+        <div class="panel__intro">
+          <p class="panel__kicker">Sobre OKIN</p>
+          <p class="panel__lead">Panaderos en Zumaia desde 1994. Capacidad industrial y un equipo que trabaja contigo.</p>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Quiénes somos</p>
+          <a href="https://www.okin.es/sobre-okin">Nuestra historia</a><a href="#">Nuestro obrador</a><a href="#">Equipo</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Calidad e innovación</p>
+          <a href="#">Calidad y certificaciones</a><a href="#">I+D</a><a href="#">Clean label</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Compromiso</p>
+          <a href="https://www.okin.es/compromiso-con-la-sostenibilidad">Sostenibilidad</a><a href="https://www.okin.es/compromiso-cliente">Servicio profesional</a><a href="https://www.okin.es/trabaja-con-nosotros">Empleo</a>
+        </div>
+        <a class="panel__card" href="https://www.okin.es/sobre-okin">
+          <figure><img src="assets/img/okin-linea-operarias.jpg" alt="" loading="lazy"></figure>
+          <span class="panel__card-tag">El obrador</span>
+          <b>Zumaia, 1994</b>
+          <span>Cómo trabajamos la doble fermentación a escala industrial.</span>
+        </a>
+      </div>
+      <div class="panel__foot">
+        <a href="https://www.okin.es/sobre-okin">Conocer OKIN <span class="ms" aria-hidden="true">arrow_forward</span></a>
+        <span>Salud · Competitividad · Responsabilidad · Sabor</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Buscador ---------- -->
+  <div class="search" id="search" hidden>
+    <form class="search__in" role="search" onsubmit="return false">
+      <label class="sr" for="searchInput">Buscar pan o referencia</label>
+      <span class="ms" aria-hidden="true">search</span>
+      <input id="searchInput" type="search" autocomplete="off" placeholder="Nombre, referencia u ocasión. P. ej.: P146A, barra, desayuno">
+      <button type="button" class="search__photo" title="Buscar por foto · fase 2" aria-label="Buscar por foto (próximamente)">
+        <span class="ms" aria-hidden="true">photo_camera</span>
+      </button>
+      <button type="button" class="search__close" data-search-close aria-label="Cerrar buscador"><span class="ms" aria-hidden="true">close</span><kbd aria-hidden="true">Esc</kbd></button>
+    </form>
+    <div class="search__out">
+      <div class="search__chips" id="searchChips">
+        <span>Prueba con</span>
+        <button type="button">Desayuno</button><button type="button">Sin horno</button><button type="button">P146A</button><button type="button">Bocadillo</button><button type="button">Semillas</button>
+      </div>
+      <ul class="search__results" id="searchResults" aria-live="polite"></ul>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+
+<!-- ---------- Menú móvil ---------- -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <a class="m-cta" href="index.html#recomendador" data-close>
+    <span><small>3 preguntas</small>Encontrar mi pan</span>
+    <span class="ms" aria-hidden="true">arrow_forward</span>
+  </a>
+
+  <div class="m-acc">
+    <details name="m">
+      <summary>Panes</summary>
+      <div class="m-acc__body">
+        <p>Por canal</p>
+        <div class="m-chips"><a href="https://www.okin.es/horeca">Horeca</a><a href="#">Retail</a><a href="#">Marca de distribuidor</a><a href="#">Distribución</a><a href="#">Exportación</a><a href="#">Industria</a></div>
+        <p>Por ocasión</p>
+        <div class="m-chips"><a href="panes.html?ocasion=desayuno">Desayunos</a><a href="panes.html?ocasion=brunch">Brunch</a><a href="panes.html?ocasion=bocadillo">Bocadillos</a><a href="panes.html?ocasion=pintxo">Pintxos y tapas</a><a href="panes.html?ocasion=mesa">Menú del día</a></div>
+        <p>Por familia</p>
+        <div class="m-chips"><a href="panes.html?familia=rustikos">Rustikos</a><a href="panes.html?familia=gastro">Gastro</a><a href="panes.html?familia=premiere">Premiere</a><a href="panes.html?preparacion=ready">Gourmet Ready</a><a href="panes.html?familia=zereal">Zereal</a></div>
+        <a class="m-more" href="panes.html">Ver todos los panes <span class="ms" aria-hidden="true">arrow_forward</span></a>
+      </div>
+    </details>
+    <details name="m">
+      <summary>Inspiración</summary>
+      <div class="m-acc__body">
+        <div class="m-list"><a href="#">Recetas</a><a href="#">Momentos OKIN</a><a href="#">Guías prácticas</a><a href="#">Biblioteca: informes y tendencias</a><a href="#">Sala de prensa</a></div>
+      </div>
+    </details>
+    <details name="m">
+      <summary>Sobre OKIN</summary>
+      <div class="m-acc__body">
+        <div class="m-list"><a href="https://www.okin.es/sobre-okin">Nuestra historia</a><a href="#">Nuestro obrador y equipo</a><a href="#">Calidad e innovación</a><a href="https://www.okin.es/compromiso-con-la-sostenibilidad">Sostenibilidad</a><a href="https://www.okin.es/compromiso-cliente">Servicio profesional</a></div>
+      </div>
+    </details>
+    <a class="m-acc__link" href="https://www.okin.es/blog">Actualidad</a>
+  </div>
+
+  <div class="m-utils">
+    <a href="#login"><span class="ms" aria-hidden="true">lock</span>Área clientes</a>
+    <a href="https://www.okin.es/contacto">Contacto</a>
+    <a href="https://www.okin.es/descargar-catalogos">Descargas</a>
+  </div>
+
+  <div class="m-sec">
+    <a href="https://www.okin.es/delegacion-madrid">Delegación Madrid</a>
+    <a href="https://www.okin.es/trabaja-con-nosotros">Trabaja con nosotros</a>
+  </div>
+
+  <div class="mobile-menu__foot">
+    <span class="m-langs"><a href="#" aria-current="true">ES</a><a href="https://www.okin.es/en">EN</a><a href="https://www.okin.es/fr">FR</a><a href="https://www.okin.es/it">IT</a><a href="https://www.okin.es/de">DE</a></span>
+    <a href="tel:+34943865650">+34 943 865 650</a>
+  </div>
+</div>
+<!--@HEADER:end-->
+
+<main id="contenido">
+
+<!-- ============ FICHA DE PRODUCTO · v0.3 ============
+     La ficha actual de okin.es, con el sistema de diseño nuevo.
+     Orden fijo y una sola rejilla: cada sección lleva su número y título a la izquierda y el contenido a la derecha.
+       Titular → foto grande con comparador (entera / abierta)
+       01 Descripción          → texto de okin.es + 3 destacados
+       02 Ficha técnica        → características, preparación y embalaje
+       03 Nutrición y sabor    → valores nutricionales y perfil organoléptico
+       04 Descarga de materiales
+       Cierre                  → contacto y «Elige tu pan»
+     Los bloques 01 (destacados) a 04 se pintan desde los datos (productos.js + OKIN.FICHA en ficha.js):
+     sirven tal cual para cualquier pan y los campos sin dato no aparecen.
+     La v0.2 está en «_backup v0.6 ficha limpia antes de reordenar/». -->
+
+<!-- Llega desde el recomendador -->
+<div class="why" id="why" hidden>
+  <div class="wrap why__in">
+    <span class="why__k"><span class="ms" aria-hidden="true">check</span>Te la proponemos porque</span>
+    <ol class="why__steps" id="whySteps"></ol>
+    <a class="why__back" href="recomendador.html" id="whyBack">Ver otras opciones</a>
+  </div>
+</div>
+
+<!-- Titular + foto -->
+<section class="pd" aria-labelledby="pdp-title">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Estás en"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><a href="panes.html">Panes</a><span aria-hidden="true">/</span><a href="panes.html?familia=gourmet">Gourmet</a><span aria-hidden="true">/</span><span aria-current="page">Barra Gourmet Ready</span></nav>
+
+    <div class="pd__head">
+      <div>
+        <p class="pd__meta"><span class="badge badge--new">Novedad</span>Ref. P146A · Familia Gourmet</p>
+        <h1 class="pd__name" id="pdp-title">Barra Gourmet Ready</h1>
+      </div>
+      <div class="pd__ctas">
+        <a class="btn btn--brown" href="https://www.okin.es/contacto?producto=P146A"><span class="btn__label">Pedir una muestra</span><span class="btn__icon" aria-hidden="true"><span class="ms">arrow_forward</span></span></a>
+        <a class="btn btn--line" href="#descargas"><span class="btn__label">Ficha técnica</span><span class="btn__icon" aria-hidden="true"><span class="ms">download</span></span></a>
+      </div>
+    </div>
+
+    <!-- Comparador: a la izquierda la miga, a la derecha la barra entera -->
+    <figure class="cmpr" id="cmpr" style="--x: 50" data-src-tag="OKIN · foto de producto">
+      <div class="cmpr__stage">
+        <div class="cmpr__frame">
+          <img class="cmpr__img" src="assets/img/barra-ready-abierta.webp" alt="Barra Gourmet Ready abierta: miga tierna y alveolada" width="1342" height="290" fetchpriority="high">
+          <img class="cmpr__img cmpr__top" src="assets/img/barra-ready-entera.webp" alt="Barra Gourmet Ready entera: corteza fina con la greña abierta" width="1342" height="290" fetchpriority="high">
+          <span class="cmpr__line" aria-hidden="true"><span class="cmpr__knob"><span class="ms">arrow_back</span><span class="ms">arrow_forward</span></span></span>
+          <input class="cmpr__range" type="range" min="0" max="100" value="50" step="0.5" aria-label="Desliza para comparar la miga y la corteza">
+        </div>
+      </div>
+      <figcaption class="cmpr__cap">
+        <span><b>Miga</b> tierna y alveolada</span>
+        <span class="cmpr__hint" aria-hidden="true">Desliza para ver por dentro</span>
+        <span><b>Corteza</b> fina · 45 × 7 cm</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 01 · Descripción (texto de okin.es) -->
+<section class="sec" aria-labelledby="desc-title">
+  <div class="wrap sec__in">
+    <header class="sec__head"><span class="sec__n">01</span><h2 class="sec__t" id="desc-title">Descripción</h2></header>
+    <div class="sec__body">
+      <p class="desc__lead">La solución más rápida y sencilla para disfrutar de un pan recién hecho.</p>
+      <div class="desc__text">
+        <p>La Barra Gourmet Ready es una pieza de pan clásica, pensada para ofrecer máxima practicidad sin renunciar al sabor. Elaborada con una receta sencilla y honesta (harina de trigo, agua, sal, levadura, harina de cebada malteada y tostada, harina de trigo malteado y enzimas), esta barra se presenta como una solución perfecta para quienes necesitan un pan listo en segundos.</p>
+        <p>Su gran ventaja es su facilidad de uso: solo requiere descongelar para estar lista para consumir. No necesita cocción, aunque un rápido golpe de horno o tostado mejora su corteza y aroma, dándole un acabado recién horneado que encantará a cualquier cliente.</p>
+        <p class="desc__use"><b>Propuesta de consumo</b>Perfecta para hostelería, catering o supermercados que necesiten una solución rápida y de calidad.</p>
+      </div>
+      <ul class="feats" id="destacados" role="list"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · Ficha técnica -->
+<section class="sec" id="ficha-tecnica" aria-labelledby="spec-title">
+  <div class="wrap sec__in">
+    <header class="sec__head"><span class="sec__n">02</span><h2 class="sec__t" id="spec-title">Ficha técnica</h2></header>
+    <div class="sec__body specs" id="specs"></div>
+  </div>
+</section>
+
+<!-- 03 · Nutrición y sabor -->
+<section class="sec" aria-labelledby="nutri-title">
+  <div class="wrap sec__in">
+    <header class="sec__head"><span class="sec__n">03</span><h2 class="sec__t" id="nutri-title">Nutrición y sabor</h2></header>
+    <div class="sec__body specs specs--2" id="nutri"></div>
+  </div>
+</section>
+
+<!-- 04 · Descarga de materiales -->
+<section class="sec" id="descargas" aria-labelledby="dl-title">
+  <div class="wrap sec__in">
+    <header class="sec__head"><span class="sec__n">04</span><h2 class="sec__t" id="dl-title">Descarga de materiales</h2></header>
+    <ul class="sec__body files" id="files" role="list"></ul>
+  </div>
+</section>
+
+<!-- Cierre: las dos salidas de la ficha actual -->
+<section class="sec sec--end" aria-label="Contacto">
+  <div class="wrap sec__in">
+    <header class="sec__head"><h2 class="sec__t">¿Te ayudamos?</h2></header>
+    <div class="sec__body outs">
+      <a class="out" href="https://www.okin.es/contacto?producto=P146A">
+        <span class="out__k">¿Necesitas una solución personalizada?</span>
+        <span class="out__t">Contacta con nosotros <span class="ms" aria-hidden="true">arrow_forward</span></span>
+      </a>
+      <a class="out" href="panes.html">
+        <span class="out__k">¿Estás buscando un pan concreto?</span>
+        <span class="out__t">Elige tu pan <span class="ms" aria-hidden="true">arrow_forward</span></span>
+      </a>
+      <p class="outs__phone">O llámanos: <a href="tel:+34943865650">+34 943 865 650</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Barra fija en móvil: la acción siempre a mano -->
+<div class="sticky-buy" id="stickyBuy" aria-hidden="true">
+  <div class="sticky-buy__info"><b>Barra Gourmet Ready</b><span>P146A · 30 min · sin horno</span></div>
+  <a class="sticky-buy__pdf" href="https://www.okin.es/pdf_vertical/barra-gourmet-ready" target="_blank" rel="noopener" aria-label="Ficha de producto en PDF" tabindex="-1"><span class="ms" aria-hidden="true">download</span></a>
+  <a class="sticky-buy__go" href="https://www.okin.es/contacto?producto=P146A" tabindex="-1">Pedir muestra</a>
+</div>
+
+<!--@FOOTER:start-->
+<!-- ============ PIE ============ -->
+<footer class="site-footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="assets/brand/okin-sello-negro.png" alt="OKIN · Vuelve a comer pan" class="footer__seal" loading="lazy">
+      <p>Panaderos en Zumaia desde 1994. Pan precocido congelado para profesionales.</p>
+    </div>
+    <nav class="footer__col" aria-label="Panes">
+      <h4>Panes</h4>
+      <a href="panes.html">Elige tu pan</a>
+      <a href="index.html#recomendador">Encontrar mi pan</a>
+      <a href="https://www.okin.es/descargar-catalogos">Descargas</a>
+    </nav>
+    <nav class="footer__col" aria-label="Por canal">
+      <h4>Por canal</h4>
+      <a href="https://www.okin.es/horeca">Horeca</a>
+      <a href="#">Retail</a>
+      <a href="#">Marca de distribuidor</a>
+      <a href="#">Distribución</a>
+      <a href="#">Exportación</a>
+      <a href="#">Industria</a>
+    </nav>
+    <nav class="footer__col" aria-label="OKIN">
+      <h4>OKIN</h4>
+      <a href="https://www.okin.es/sobre-okin">Sobre OKIN</a>
+      <a href="#">Inspiración</a>
+      <a href="https://www.okin.es/blog">Actualidad</a>
+      <a href="https://www.okin.es/compromiso-con-la-sostenibilidad">Sostenibilidad</a>
+      <a href="https://www.okin.es/trabaja-con-nosotros">Trabaja con nosotros</a>
+    </nav>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <p>Pol. Ind. José María Korta, parc. 5<br>20750 Zumaia (Gipuzkoa)</p>
+      <a href="tel:+34943865650">+34 943 865 650</a>
+      <a href="https://www.okin.es/contacto">Formulario de contacto</a>
+      <a href="https://www.okin.es/delegacion-madrid">Delegación Madrid</a>
+    </div>
+  </div>
+
+  <div class="wrap footer__mid">
+    <div class="langs" aria-label="Idiomas"><a aria-current="true" href="#">ES</a><a href="https://www.okin.es/en">EN</a><a href="https://www.okin.es/fr">FR</a><a href="https://www.okin.es/it">IT</a><a href="https://www.okin.es/de">DE</a></div>
+    <div class="social">
+      <a href="https://www.instagram.com/okinpanaderos">Instagram</a>
+      <a href="https://www.linkedin.com/company/panokin">LinkedIn</a>
+      <a href="https://www.youtube.com/@okinartadialimentacion">YouTube</a>
+      <a href="https://es-es.facebook.com/panokin">Facebook</a>
+    </div>
+  </div>
+
+  <div class="footer__word" aria-hidden="true"><img src="assets/brand/okin-blanco.png" alt=""></div>
+
+  <div class="wrap footer__legal">
+    <span>© 2026 Artadi Alimentación S.L. · CIF B-20682522 · Made in Zumaia</span>
+    <span><a href="https://www.okin.es/aviso-legal">Aviso legal</a><a href="https://www.okin.es/politica-de-privacidad">Privacidad</a><a href="https://www.okin.es/politica-de-cookies">Cookies</a><a href="https://okin.canaldenunciasanonimas.com">Canal de denuncias</a></span>
+  </div>
+</footer>
+
+<!-- Herramienta de revisión: muestra el origen de cada imagen -->
+<button class="review-toggle" id="reviewToggle" aria-pressed="false" title="Tecla «i»">Origen de imágenes</button>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ast" viewBox="0 0 20 20"><path d="M10 1v18M2.2 5.5l15.6 9M2.2 14.5l15.6-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></symbol>
+</svg>
+<!--@FOOTER:end-->
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/productos.js" defer></script>
+<script src="assets/js/ficha.js" defer></script>
+</body>
+</html>

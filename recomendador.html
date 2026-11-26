@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Encontrar mi pan · OKIN</title>
+  <meta name="description" content="Cuatro preguntas sobre tu negocio y te recomendamos el pan de OKIN que te encaja.">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/zjp0tcy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap">
+  <link rel="preload" href="assets/fonts/SerialB-RegularBlur.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Iconos: Material Symbols (Google Fonts Icons), subconjunto: icon_names en orden alfabético -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0..1,0&icon_names=ac_unit,arrow_back,arrow_forward,check,close,local_fire_department&display=block">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/recomendador.css">
+</head>
+<body class="rk">
+
+<!-- Recomendador v0.5: una pantalla por pregunta, fondo blanco, sin la cabecera completa del sitio.
+     Solo logo, progreso y salir. -->
+<header class="rk-top">
+  <a class="rk-top__brand" href="index.html" aria-label="OKIN, inicio"><img src="assets/brand/okin-negro.png" alt="OKIN" width="900" height="313"></a>
+  <span class="rk-top__title">Encontrar mi pan</span>
+  <a class="rk-top__close" href="index.html#recomendador" aria-label="Salir del recomendador"><span class="ms" aria-hidden="true">close</span></a>
+  <div class="rk-prog" aria-hidden="true"><i id="rkBar"></i></div>
+</header>
+
+<main class="rk-main" id="contenido">
+  <div class="rk-screen" id="rkScreen"></div>
+</main>
+
+<script src="assets/js/productos.js" defer></script>
+<script src="assets/js/recomendador.js" defer></script>
+</body>
+</html>

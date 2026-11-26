@@ -1,0 +1,7 @@
+# Copias de seguridad locales
+_backup*/
+
+# macOS / sistema
+.DS_Store
+._*
+Thumbs.db

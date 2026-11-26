@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Elige tu pan · OKIN</title>
+  <meta name="description" content="Más de 120 panes precocidos congelados sin aditivos ni conservantes. Filtra por ocasión, preparación, formato o familia y compara hasta cuatro.">
+  <meta name="theme-color" content="#5D493C">
+
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/zjp0tcy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap">
+  <link rel="preload" href="assets/fonts/SerialB-RegularBlur.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Iconos: Material Symbols (Google Fonts Icons), subconjunto: icon_names en orden alfabético -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..500,0..1,0&icon_names=ac_unit,add,arrow_back,arrow_downward,arrow_forward,bakery_dining,call,check,close,compare_arrows,description,download,expand_more,info,inventory_2,local_fire_department,local_shipping,lock,open_in_new,photo_camera,qr_code_2,remove,search,swap_vert,timer,tune&display=block">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/paginas.css">
+</head>
+<body class="page page--catalogo page--white">
+
+<!--@HEADER:start-->
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ CABECERA v0.4 ============
+     Sigue la propuesta «okin diseño» (diap. 2):
+       · Menú superior secundario: Delegación Madrid · Trabaja con nosotros · Contacto · Área clientes · idioma
+       · Menú principal: Panes · Inspiración · Sobre OKIN · Actualidad
+       · Panes recoge los tres recorridos: por canal, por ocasión y por familia
+     Cambios frente a la v0.2: «Soluciones» pasa a Panes › Por canal (seis perfiles),
+     «Biblioteca» pasa a Inspiración y «Actualidad» es un enlace directo.
+     ========================================= -->
+<header class="site-header" id="header">
+  <div class="topbar">
+    <p class="topbar__claim">Panaderos en Zumaia desde 1994</p>
+    <nav class="topbar__nav" aria-label="Secundario">
+      <a class="t-link" href="https://www.okin.es/delegacion-madrid">Delegación Madrid</a>
+      <a class="t-link" href="https://www.okin.es/trabaja-con-nosotros">Trabaja con nosotros</a>
+      <a class="t-link" href="https://www.okin.es/contacto">Contacto</a>
+      <div class="pop-wrap">
+        <button class="t-link u-area" aria-expanded="false" aria-controls="pop-area" data-pop="area">
+          <span class="ms" aria-hidden="true">lock</span>Área clientes
+        </button>
+        <div class="pop pop--area" id="pop-area" hidden>
+          <p class="pop__title">Área clientes</p>
+          <p>Para clientes con cuenta OKIN: pedidos, fichas técnicas, facturas, albaranes, material comercial y promociones.</p>
+          <a class="btn btn--brown btn--sm" href="#login"><span class="btn__label">Entrar</span><span class="btn__icon" aria-hidden="true"><span class="ms">arrow_forward</span></span></a>
+          <a class="pop__aside" href="https://www.okin.es/contacto">¿Aún no tienes acceso? Solicítalo</a>
+        </div>
+      </div>
+      <div class="pop-wrap">
+        <button class="t-link u-lang" aria-expanded="false" aria-controls="pop-lang" data-pop="lang" aria-label="Idioma: español">ES<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+        <div class="pop pop--lang" id="pop-lang" hidden>
+          <a href="#" aria-current="true">Español</a><a href="https://www.okin.es/en" lang="en">English</a><a href="https://www.okin.es/fr" lang="fr">Français</a><a href="https://www.okin.es/it" lang="it">Italiano</a><a href="https://www.okin.es/de" lang="de">Deutsch</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="hdr">
+    <a class="brand" href="index.html" aria-label="OKIN, inicio">
+      <img class="brand__light" src="assets/brand/okin-blanco.png" alt="OKIN" width="900" height="313">
+      <img class="brand__dark" src="assets/brand/okin-negro.png" alt="" width="900" height="313">
+    </a>
+
+    <nav class="doors" aria-label="Principal">
+      <button class="door" aria-expanded="false" aria-controls="panel-panes" data-panel="panes">Panes<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+      <button class="door" aria-expanded="false" aria-controls="panel-inspiracion" data-panel="inspiracion">Inspiración<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+      <button class="door" aria-expanded="false" aria-controls="panel-okin" data-panel="okin">Sobre OKIN<span class="ms ms--chev" aria-hidden="true">expand_more</span></button>
+      <a class="door" href="https://www.okin.es/blog">Actualidad</a>
+    </nav>
+
+    <div class="utils">
+      <button class="u-search" id="searchBtn" aria-expanded="false" aria-controls="search" aria-label="Buscar pan o referencia" title="Buscar pan o referencia (/)">
+        <span class="ms" aria-hidden="true">search</span>
+      </button>
+      <a class="btn btn--yellow btn--hdr" href="index.html#recomendador">
+        <span class="btn__label">Encontrar mi pan</span>
+        <span class="btn__icon" aria-hidden="true"><span class="ms">arrow_forward</span></span>
+      </a>
+    </div>
+
+    <div class="hdr__mob">
+      <button class="m-icon" id="searchBtnM" aria-label="Buscar pan o referencia" aria-controls="search" aria-expanded="false">
+        <span class="ms" aria-hidden="true">search</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">Menú</button>
+    </div>
+  </div>
+
+  <!-- ---------- Paneles (escritorio) ---------- -->
+  <div class="panels">
+    <section class="panel" id="panel-panes" aria-label="Panes" hidden>
+      <div class="panel__in">
+        <div class="panel__intro">
+          <p class="panel__kicker">Panes</p>
+          <p class="panel__lead">Más de 200 referencias de pan precocido congelado. Búscalas por tu tipo de negocio, por el momento en que las sirves o por familia.</p>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Por canal</p>
+          <a href="https://www.okin.es/horeca">Horeca</a><a href="#">Retail</a><a href="#">Marca de distribuidor</a><a href="#">Distribución</a><a href="#">Exportación</a><a href="#">Industria</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Por ocasión</p>
+          <a href="panes.html?ocasion=desayuno">Desayunos</a><a href="panes.html?ocasion=brunch">Brunch</a><a href="panes.html?ocasion=bocadillo">Bocadillos</a><a href="panes.html?ocasion=pintxo">Pintxos y tapas</a><a href="panes.html?ocasion=mesa">Menú del día</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Por familia</p>
+          <a href="panes.html?familia=rustikos">Rustikos</a><a href="panes.html?familia=gastro">Gastro</a><a href="panes.html?familia=premiere">Premiere</a><a href="panes.html?preparacion=ready">Gourmet Ready</a><a href="panes.html?familia=zereal">Zereal</a><a href="#">Todas las familias</a>
+        </div>
+        <a class="panel__card" href="producto-barra-gourmet-ready.html">
+          <figure><img src="assets/img/barra-ready-1.jpg" alt="" loading="lazy"></figure>
+          <span class="panel__card-tag">Novedad</span>
+          <b>Barra Gourmet Ready</b>
+          <span>Se sirve tras 30 min de descongelación. Sin horno.</span>
+        </a>
+      </div>
+      <div class="panel__foot">
+        <a href="panes.html" class="panel__all">Ver todos los panes <span class="ms" aria-hidden="true">arrow_forward</span></a>
+        <a href="index.html#recomendador" data-close>¿Necesitas ayuda para elegir tu pan? <u>Encontrar mi pan</u></a>
+        <a href="https://www.okin.es/descargar-catalogos">Descargas: catálogos y fichas técnicas</a>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-inspiracion" aria-label="Inspiración" hidden>
+      <div class="panel__in">
+        <div class="panel__intro">
+          <p class="panel__kicker">Inspiración</p>
+          <p class="panel__lead">Ideas para servir y vender más pan: recetas, momentos de consumo y guías prácticas.</p>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Recetas</p>
+          <a href="#">Desayunos y brunch</a><a href="#">Bocadillos</a><a href="#">Pintxos y tapas</a><a href="#">Todas las recetas</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Guías</p>
+          <a href="#">Descongelar y servir</a><a href="#">Hornear en su punto</a><a href="#">Conservar el pan</a><a href="#">Vender pan en tienda</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Biblioteca</p>
+          <a href="#">Informes</a><a href="#">Estudios de mercado</a><a href="#">Tendencias</a>
+        </div>
+        <a class="panel__card" href="#">
+          <figure><img src="assets/img/okin-desayuno-variado.jpg" alt="" loading="lazy"></figure>
+          <span class="panel__card-tag">Momentos OKIN</span>
+          <b>El pan del desayuno</b>
+          <span>Cómo lo sirven nuestros clientes, de la tostada al bocadillo.</span>
+        </a>
+      </div>
+      <div class="panel__foot">
+        <a href="#">Ver toda la inspiración <span class="ms" aria-hidden="true">arrow_forward</span></a>
+        <a href="#">Momentos OKIN</a>
+        <a href="#">Sala de prensa</a>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-okin" aria-label="Sobre OKIN" hidden>
+      <div class="panel__in">
+        <div class="panel__intro">
+          <p class="panel__kicker">Sobre OKIN</p>
+          <p class="panel__lead">Panaderos en Zumaia desde 1994. Capacidad industrial y un equipo que trabaja contigo.</p>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Quiénes somos</p>
+          <a href="https://www.okin.es/sobre-okin">Nuestra historia</a><a href="#">Nuestro obrador</a><a href="#">Equipo</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Calidad e innovación</p>
+          <a href="#">Calidad y certificaciones</a><a href="#">I+D</a><a href="#">Clean label</a>
+        </div>
+        <div class="panel__col">
+          <p class="panel__h">Compromiso</p>
+          <a href="https://www.okin.es/compromiso-con-la-sostenibilidad">Sostenibilidad</a><a href="https://www.okin.es/compromiso-cliente">Servicio profesional</a><a href="https://www.okin.es/trabaja-con-nosotros">Empleo</a>
+        </div>
+        <a class="panel__card" href="https://www.okin.es/sobre-okin">
+          <figure><img src="assets/img/okin-linea-operarias.jpg" alt="" loading="lazy"></figure>
+          <span class="panel__card-tag">El obrador</span>
+          <b>Zumaia, 1994</b>
+          <span>Cómo trabajamos la doble fermentación a escala industrial.</span>
+        </a>
+      </div>
+      <div class="panel__foot">
+        <a href="https://www.okin.es/sobre-okin">Conocer OKIN <span class="ms" aria-hidden="true">arrow_forward</span></a>
+        <span>Salud · Competitividad · Responsabilidad · Sabor</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Buscador ---------- -->
+  <div class="search" id="search" hidden>
+    <form class="search__in" role="search" onsubmit="return false">
+      <label class="sr" for="searchInput">Buscar pan o referencia</label>
+      <span class="ms" aria-hidden="true">search</span>
+      <input id="searchInput" type="search" autocomplete="off" placeholder="Nombre, referencia u ocasión. P. ej.: P146A, barra, desayuno">
+      <button type="button" class="search__photo" title="Buscar por foto · fase 2" aria-label="Buscar por foto (próximamente)">
+        <span class="ms" aria-hidden="true">photo_camera</span>
+      </button>
+      <button type="button" class="search__close" data-search-close aria-label="Cerrar buscador"><span class="ms" aria-hidden="true">close</span><kbd aria-hidden="true">Esc</kbd></button>
+    </form>
+    <div class="search__out">
+      <div class="search__chips" id="searchChips">
+        <span>Prueba con</span>
+        <button type="button">Desayuno</button><button type="button">Sin horno</button><button type="button">P146A</button><button type="button">Bocadillo</button><button type="button">Semillas</button>
+      </div>
+      <ul class="search__results" id="searchResults" aria-live="polite"></ul>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+
+<!-- ---------- Menú móvil ---------- -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <a class="m-cta" href="index.html#recomendador" data-close>
+    <span><small>3 preguntas</small>Encontrar mi pan</span>
+    <span class="ms" aria-hidden="true">arrow_forward</span>
+  </a>
+
+  <div class="m-acc">
+    <details name="m">
+      <summary>Panes</summary>
+      <div class="m-acc__body">
+        <p>Por canal</p>
+        <div class="m-chips"><a href="https://www.okin.es/horeca">Horeca</a><a href="#">Retail</a><a href="#">Marca de distribuidor</a><a href="#">Distribución</a><a href="#">Exportación</a><a href="#">Industria</a></div>
+        <p>Por ocasión</p>
+        <div class="m-chips"><a href="panes.html?ocasion=desayuno">Desayunos</a><a href="panes.html?ocasion=brunch">Brunch</a><a href="panes.html?ocasion=bocadillo">Bocadillos</a><a href="panes.html?ocasion=pintxo">Pintxos y tapas</a><a href="panes.html?ocasion=mesa">Menú del día</a></div>
+        <p>Por familia</p>
+        <div class="m-chips"><a href="panes.html?familia=rustikos">Rustikos</a><a href="panes.html?familia=gastro">Gastro</a><a href="panes.html?familia=premiere">Premiere</a><a href="panes.html?preparacion=ready">Gourmet Ready</a><a href="panes.html?familia=zereal">Zereal</a></div>
+        <a class="m-more" href="panes.html">Ver todos los panes <span class="ms" aria-hidden="true">arrow_forward</span></a>
+      </div>
+    </details>
+    <details name="m">
+      <summary>Inspiración</summary>
+      <div class="m-acc__body">
+        <div class="m-list"><a href="#">Recetas</a><a href="#">Momentos OKIN</a><a href="#">Guías prácticas</a><a href="#">Biblioteca: informes y tendencias</a><a href="#">Sala de prensa</a></div>
+      </div>
+    </details>
+    <details name="m">
+      <summary>Sobre OKIN</summary>
+      <div class="m-acc__body">
+        <div class="m-list"><a href="https://www.okin.es/sobre-okin">Nuestra historia</a><a href="#">Nuestro obrador y equipo</a><a href="#">Calidad e innovación</a><a href="https://www.okin.es/compromiso-con-la-sostenibilidad">Sostenibilidad</a><a href="https://www.okin.es/compromiso-cliente">Servicio profesional</a></div>
+      </div>
+    </details>
+    <a class="m-acc__link" href="https://www.okin.es/blog">Actualidad</a>
+  </div>
+
+  <div class="m-utils">
+    <a href="#login"><span class="ms" aria-hidden="true">lock</span>Área clientes</a>
+    <a href="https://www.okin.es/contacto">Contacto</a>
+    <a href="https://www.okin.es/descargar-catalogos">Descargas</a>
+  </div>
+
+  <div class="m-sec">
+    <a href="https://www.okin.es/delegacion-madrid">Delegación Madrid</a>
+    <a href="https://www.okin.es/trabaja-con-nosotros">Trabaja con nosotros</a>
+  </div>
+
+  <div class="mobile-menu__foot">
+    <span class="m-langs"><a href="#" aria-current="true">ES</a><a href="https://www.okin.es/en">EN</a><a href="https://www.okin.es/fr">FR</a><a href="https://www.okin.es/it">IT</a><a href="https://www.okin.es/de">DE</a></span>
+    <a href="tel:+34943865650">+34 943 865 650</a>
+  </div>
+</div>
+<!--@HEADER:end-->
+
+<main id="contenido">
+
+<!-- ============ ELIGE TU PAN · v0.2 (simplificada) ============
+     Fondo blanco, sin hero ni entradas rápidas: título, columna lateral (buscador + filtros) y rejilla ancha.
+     Referencia de sencillez: catálogo de Europastry.
+     Muestra de 13 panes reales (assets/js/productos.js). -->
+
+<section class="cat" aria-labelledby="cat-title">
+  <div class="cat__wrap">
+    <div class="cat__top">
+      <nav class="crumbs" aria-label="Estás en"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Panes</span></nav>
+      <div class="cat__title">
+        <h1 id="cat-title">Elige tu pan</h1>
+        <p class="cat__count" id="count" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="cat__in">
+      <!-- Columna lateral: buscador + filtros. En móvil, el buscador se queda arriba y los filtros se abren en una hoja -->
+      <aside class="side" aria-label="Buscar y filtrar">
+        <form class="side-search" role="search" onsubmit="return false">
+          <label class="sr" for="catQ">Buscar por nombre o referencia</label>
+          <span class="ms" aria-hidden="true">search</span>
+          <input id="catQ" type="search" autocomplete="off" placeholder="Buscar pan o referencia">
+        </form>
+
+        <div class="filters" id="filters" aria-label="Filtros">
+          <div class="filters__top">
+            <p class="filters__title">Filtros</p>
+            <button class="filters__close" id="filtersClose" type="button" aria-label="Cerrar filtros"><span class="ms" aria-hidden="true">close</span></button>
+          </div>
+          <form class="filters__body" id="filtersForm" onsubmit="return false">
+            <details class="fgroup" open data-group="preparacion"><summary>Preparación</summary><div class="fgroup__opts"></div></details>
+            <details class="fgroup" open data-group="ocasion"><summary>Ocasión</summary><div class="fgroup__opts"></div></details>
+            <details class="fgroup" open data-group="familia"><summary>Familia</summary><div class="fgroup__opts"></div></details>
+            <details class="fgroup" data-group="formato"><summary>Formato</summary><div class="fgroup__opts"></div></details>
+            <details class="fgroup" data-group="elaboracion"><summary>Elaboración</summary><div class="fgroup__opts"></div></details>
+            <details class="fgroup" data-group="negocio"><summary>Para tu negocio</summary><div class="fgroup__opts"></div></details>
+          </form>
+          <div class="filters__foot">
+            <button class="link-btn" id="filtersReset" type="button">Quitar filtros</button>
+            <button class="btn btn--brown btn--sm filters__apply" id="filtersApply" type="button"><span class="btn__label" id="filtersApplyLabel">Ver panes</span><span class="btn__icon" aria-hidden="true"><span class="ms">arrow_forward</span></span></button>
+          </div>
+        </div>
+
+        <div class="side__links">
+          <a href="index.html#recomendador"><span class="ms" aria-hidden="true">arrow_forward</span>¿No sabes cuál? Encontrar mi pan</a>
+          <a href="https://www.okin.es/descargar-catalogos"><span class="ms" aria-hidden="true">download</span>Descargar catálogo</a>
+        </div>
+      </aside>
+
+      <div class="results">
+        <div class="toolbar">
+          <button class="toolbar__filters" id="filtersOpen" type="button" aria-controls="filters" aria-expanded="false"><span class="ms" aria-hidden="true">tune</span>Filtros<b id="filtersCount" hidden></b></button>
+          <div class="active" id="activeChips" aria-label="Filtros activos"></div>
+          <label class="toolbar__sort"><span class="sr">Ordenar</span>
+            <select id="sort">
+              <option value="rec">Recomendados</option>
+              <option value="new">Novedades</option>
+              <option value="g-asc">Peso: de menor a mayor</option>
+              <option value="g-desc">Peso: de mayor a menor</option>
+              <option value="az">Nombre A–Z</option>
+            </select>
+            <span class="ms" aria-hidden="true">expand_more</span>
+          </label>
+        </div>
+
+        <div class="grid" id="grid"></div>
+
+        <div class="empty" id="empty" hidden>
+          <p class="h-2">Ningún pan cumple todo</p>
+          <p>Quita algún filtro o cuéntanos qué necesitas: si no lo tenemos, quizá podamos hacerlo.</p>
+          <div class="empty__ctas">
+            <button class="btn btn--brown btn--sm" id="emptyReset" type="button"><span class="btn__label">Quitar filtros</span><span class="btn__icon" aria-hidden="true"><span class="ms">close</span></span></button>
+            <a class="link-plain" href="https://www.okin.es/contacto">Hablar con el equipo <span class="ms" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <div class="more">
+          <p class="more__txt">Has visto <b>13</b> de 122 panes</p>
+          <div class="more__bar" aria-hidden="true"><i style="width: 10.6%"></i></div>
+          <button class="btn btn--line btn--sm" id="loadMore" type="button"><span class="btn__label">Cargar más</span><span class="btn__icon" aria-hidden="true"><span class="ms">add</span></span></button>
+          <p class="note" id="moreNote" hidden>Prototipo: esta muestra tiene 13 panes. En producción se cargan de 12 en 12.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Bandeja de comparación (hasta 4) -->
+<div class="tray" id="tray" hidden>
+  <div class="wrap tray__in">
+    <p class="tray__t"><b id="trayN">0</b> de 4 para comparar</p>
+    <ul class="tray__list" id="trayList"></ul>
+    <button class="link-btn" id="trayClear" type="button">Vaciar</button>
+    <button class="btn btn--yellow btn--sm" id="trayGo" type="button"><span class="btn__label">Comparar</span><span class="btn__icon" aria-hidden="true"><span class="ms">compare_arrows</span></span></button>
+  </div>
+</div>
+
+<!-- Comparador -->
+<dialog class="cmp" id="cmp" aria-labelledby="cmp-title">
+  <div class="cmp__head">
+    <p class="h-2" id="cmp-title">Comparar panes</p>
+    <div class="cmp__tools">
+      <label class="cmp__toggle"><input type="checkbox" id="cmpOnly">Solo diferencias</label>
+      <button class="cmp__close" id="cmpClose" aria-label="Cerrar comparador"><span class="ms" aria-hidden="true">close</span></button>
+    </div>
+  </div>
+  <div class="cmp__scroll"><table class="cmp__table" id="cmpTable"></table></div>
+  <p class="note">Datos de las fichas públicas de okin.es. Lo que es igual en todos aparece atenuado.</p>
+</dialog>
+
+<!--@FOOTER:start-->
+<!-- ============ PIE ============ -->
+<footer class="site-footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="assets/brand/okin-sello-negro.png" alt="OKIN · Vuelve a comer pan" class="footer__seal" loading="lazy">
+      <p>Panaderos en Zumaia desde 1994. Pan precocido congelado para profesionales.</p>
+    </div>
+    <nav class="footer__col" aria-label="Panes">
+      <h4>Panes</h4>
+      <a href="panes.html">Elige tu pan</a>
+      <a href="index.html#recomendador">Encontrar mi pan</a>
+      <a href="https://www.okin.es/descargar-catalogos">Descargas</a>
+    </nav>
+    <nav class="footer__col" aria-label="Por canal">
+      <h4>Por canal</h4>
+      <a href="https://www.okin.es/horeca">Horeca</a>
+      <a href="#">Retail</a>
+      <a href="#">Marca de distribuidor</a>
+      <a href="#">Distribución</a>
+      <a href="#">Exportación</a>
+      <a href="#">Industria</a>
+    </nav>
+    <nav class="footer__col" aria-label="OKIN">
+      <h4>OKIN</h4>
+      <a href="https://www.okin.es/sobre-okin">Sobre OKIN</a>
+      <a href="#">Inspiración</a>
+      <a href="https://www.okin.es/blog">Actualidad</a>
+      <a href="https://www.okin.es/compromiso-con-la-sostenibilidad">Sostenibilidad</a>
+      <a href="https://www.okin.es/trabaja-con-nosotros">Trabaja con nosotros</a>
+    </nav>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <p>Pol. Ind. José María Korta, parc. 5<br>20750 Zumaia (Gipuzkoa)</p>
+      <a href="tel:+34943865650">+34 943 865 650</a>
+      <a href="https://www.okin.es/contacto">Formulario de contacto</a>
+      <a href="https://www.okin.es/delegacion-madrid">Delegación Madrid</a>
+    </div>
+  </div>
+
+  <div class="wrap footer__mid">
+    <div class="langs" aria-label="Idiomas"><a aria-current="true" href="#">ES</a><a href="https://www.okin.es/en">EN</a><a href="https://www.okin.es/fr">FR</a><a href="https://www.okin.es/it">IT</a><a href="https://www.okin.es/de">DE</a></div>
+    <div class="social">
+      <a href="https://www.instagram.com/okinpanaderos">Instagram</a>
+      <a href="https://www.linkedin.com/company/panokin">LinkedIn</a>
+      <a href="https://www.youtube.com/@okinartadialimentacion">YouTube</a>
+      <a href="https://es-es.facebook.com/panokin">Facebook</a>
+    </div>
+  </div>
+
+  <div class="footer__word" aria-hidden="true"><img src="assets/brand/okin-blanco.png" alt=""></div>
+
+  <div class="wrap footer__legal">
+    <span>© 2026 Artadi Alimentación S.L. · CIF B-20682522 · Made in Zumaia</span>
+    <span><a href="https://www.okin.es/aviso-legal">Aviso legal</a><a href="https://www.okin.es/politica-de-privacidad">Privacidad</a><a href="https://www.okin.es/politica-de-cookies">Cookies</a><a href="https://okin.canaldenunciasanonimas.com">Canal de denuncias</a></span>
+  </div>
+</footer>
+
+<!-- Herramienta de revisión: muestra el origen de cada imagen -->
+<button class="review-toggle" id="reviewToggle" aria-pressed="false" title="Tecla «i»">Origen de imágenes</button>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ast" viewBox="0 0 20 20"><path d="M10 1v18M2.2 5.5l15.6 9M2.2 14.5l15.6-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></symbol>
+</svg>
+<!--@FOOTER:end-->
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/productos.js" defer></script>
+<script src="assets/js/catalogo.js" defer></script>
+</body>
+</html>
