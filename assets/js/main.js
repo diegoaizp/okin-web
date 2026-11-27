@@ -311,7 +311,9 @@
       `<a class="answer" href="recomendador.html?para=${key}&momento=${id}"><b>${t}</b><span>${s}</span></a>`).join('');
     step.hidden = false;
     step.style.animation = 'none'; step.offsetHeight; step.style.animation = '';
-    setTimeout(() => step.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }), 60);
+    // Al desplegar las respuestas, el final de la sección queda apoyado en el borde inferior de la pantalla
+    const section = step.closest('.reco') || step;
+    setTimeout(() => section.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'end' }), 60);
     try { sessionStorage.setItem('okin-para', key); } catch (_) {}
   }
   opts.forEach(o => o.addEventListener('click', () => choose(o.dataset.para)));
@@ -483,5 +485,28 @@
   rt.addEventListener('click', () => review(!document.body.classList.contains('show-sources')));
   addEventListener('keydown', e => {
     if (e.key === 'i' && !/input|textarea/i.test(document.activeElement.tagName)) review(!document.body.classList.contains('show-sources'));
+  });
+
+  /* ---------- Franja: bucle infinito a cualquier ancho ----------
+     Clona el grupo hasta que la pista cubre la pantalla más un grupo, y desplaza exactamente un grupo por vuelta. */
+  document.querySelectorAll('.marquee__track').forEach(track => {
+    const first = track.querySelector('.marquee__group');
+    if (!first) return;
+    const SPEED = 90;                                   // px por segundo
+    function fill() {
+      const w = first.getBoundingClientRect().width;
+      if (!w) return;
+      const need = Math.ceil(track.parentElement.clientWidth / w) + 1;
+      let groups = track.querySelectorAll('.marquee__group');
+      for (let i = groups.length; i < need; i++) track.appendChild(first.cloneNode(true));
+      groups = track.querySelectorAll('.marquee__group');
+      for (let i = groups.length - 1; i >= Math.max(need, 2); i--) groups[i].remove();
+      track.style.setProperty('--shift', `-${w}px`);
+      track.style.setProperty('--dur', `${(w / SPEED).toFixed(2)}s`);
+    }
+    fill();
+    if (document.fonts) document.fonts.ready.then(fill);
+    new ResizeObserver(fill).observe(first);
+    addEventListener('resize', fill);
   });
 })();

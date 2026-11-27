@@ -44,7 +44,6 @@ Sigue la diapositiva 2 de `0. Documentacion/okin diseño.pptx`: **un menú super
 - Se mantiene «Panes» en lugar de «Productos» porque es el lenguaje del resto de la web («Elige tu pan», «Encontrar mi pan»).
 - Las tres respuestas del recomendador (servir, vender, distribuir) ya no aparecen en el menú. Los seis canales son landings de perfil y el recomendador tiene su propia entrada.
 - `--header-h` es ahora la altura total (`--topbar-h` 34 px + `--hdr-row` 72 px). En móvil la barra superior no se muestra (`--topbar-h: 0`) y sus enlaces pasan al menú.
-- La versión anterior está en `_backup v0.4 cabecera antes de la propuesta/`.
 
 ### Del briefing (p. 9) a la v0.2, para el histórico
 
@@ -66,17 +65,15 @@ Sigue la diapositiva 2 de `0. Documentacion/okin diseño.pptx`: **un menú super
 - El buscador tiene un índice de prueba de 7 entradas. El icono de cámara reserva la «búsqueda por foto» del briefing para la fase 2.
 - **Iconos:** Material Symbols Outlined (Google Fonts), cargados como subconjunto con `icon_names`. Al añadir un icono, hay que incluirlo en esa lista en orden alfabético. En la v0.3 las flechas de los bloques nuevos y de los botones también usan Material Symbols. Siguen en SVG los asteriscos y las anotaciones dibujadas de la barra.
 - Familias, características y landings por tipo de cliente son provisionales. Muchos enlaces llevan a `#` hasta que existan sus páginas.
-- La versión anterior (pestañas) está en `_backup v0.1 cabecera pestañas/`.
 
 ## Bloques (v0.3)
 
-La v0.3 reordena la home como un **mostrador**: el pan a la vista, el fabricante detrás y dos formas de pedir, señalando (buscar) o preguntando (recomendador). La versión anterior, de cinco bloques, está en `_backup v0.2 home cinco bloques/`.
+La v0.3 reordena la home como un **mostrador**: el pan a la vista, el fabricante detrás y dos formas de pedir, señalando (buscar) o preguntando (recomendador).
 
 1. **Apertura.** Igual que en la v0.2: vídeo, el titular «Real Food, for Real Life, from Real Bakers», la frase «Fabricamos pan precocido congelado para hostelería, tiendas y distribuidores…» y la acción «Encontrar mi pan». Quien ya sabe qué busca tiene el buscador de la cabecera (tecla `/`).
    - v0.6: la frase va seguida en una sola línea, pegada al margen izquierdo, con el espacio entre palabras doble (`word-spacing: .2em`, lo mismo que mide el espacio de Serial B Blur). En móvil salta de línea entre palabras.
 2. **Pruebas de fabricante.** Una franja con 1994 · 1.000.000 panes/día · +200 referencias · Clean label. Antes estaba en el bloque 4.
    - v0.6: las cuatro cifras usan la misma letra que el titular del hero (Serial B Blur, en mayúsculas y en naranja). El sello Clean Label se sustituye por el texto «Clean Label».
-   - La versión anterior del hero y de la franja está en `_backup v0.6 hero y cifras antes de alinear/`.
 2b. **Familias en grande** (carrusel). Patrón tomado del `cta-carousel` de [mushstudios.co](https://mushstudios.co/): una diapositiva a sangre cada vez, casi a todo el ancho (10 px de margen) y 72vh de alto (máx. 46rem), con degradado desde la izquierda, titular grande, una frase y una acción. Se adapta a OKIN con esquinas rectas, Serial Blur, botones de la casa y una variante clara (`pslide--light`) para fotos de fondo blanco. Cinco familias que completan las de la pestaña «Por familia»: Rustikos, Ready, Akua, Koskor y Eko. Los textos salen del catálogo 2023.
    - Pasa sola cada 6 s, en bucle. Se para con el ratón encima, con el foco dentro y fuera de pantalla. Con «reducir movimiento» o en modo `?shot` no avanza sola. No lleva botón de pausa.
    - Controles abajo. A la izquierda, contador «01 — 05» con una raya por familia (la activa, larga y amarilla). A la derecha, «anterior» compacto y «siguiente» como avance de la próxima familia: miniatura, «Siguiente» y su nombre. Una línea en el borde inferior del «siguiente» se llena mientras corre el tiempo. Los controles son de cristal esmerilado oscuro y pasan a crema y marrón en las diapositivas claras. Se arrastra con ratón o dedo, y con las flechas del teclado si el foco está dentro.
@@ -87,12 +84,10 @@ La v0.3 reordena la home como un **mostrador**: el pan a la vista, el fabricante
 5. **Sobre OKIN.** Solo «Quién está detrás de tu pan». El servicio («Y si prefieres hablarlo», con el retrato y la conversación) sale de la home y sus salidas pasan al bloque 6. El carrusel de la doble fermentación se reserva para la ficha de producto (está en el backup).
    - «Sobre OKIN» (`.okab`) sigue el bloque «About» de Union Boulangerie sobre **fondo negro**: una columna centrada con la etiqueta naranja algo girada, el titular, tres asteriscos naranjas y un párrafo con «1994» rodeado a mano (el trazo se dibuja al aparecer). Termina con el enlace «Conocer el obrador».
    - Alrededor hay cuatro fotos pequeñas de OKIN, inclinadas y por detrás del texto, como en «Hablemos». Tienen el mismo parallax opuesto: `main.js` mueve `--par` en `.closing` y en cualquier bloque con `data-par`.
-   - La versión anterior, con la foto de la línea a sangre, está en `_backup v0.4 sobre okin foto a sangre/`.
 6. **Hablemos** (cierre + servicio). Une el antiguo cierre y «El servicio». Ya no lleva «Encontrar mi pan», que se confundía con «¿Para qué necesitas el pan?» del bloque amarillo: aquí solo se habla con personas.
    - Titular «Cuéntanos cómo trabajas», al mismo tamaño que «Sobre OKIN» (`.h-display` a `clamp(2.1rem, 5vw, 4.75rem)`). Entradilla: «Te proponemos el pan que encaja en tu servicio, tu horno y tu volumen. Al otro lado hay panaderos, no una centralita.»
    - Tres salidas en fila (una debajo de otra en móvil): **Hablar con el equipo**, **Conoce a nuestra experta panadera** y **Servicio al cliente profesional**, cada una con una línea pequeña encima. Debajo, el teléfono.
    - Las fotos de alrededor son ahora de OKIN (panadero oliendo el pan y mesa de servicio) y suben a la altura del titular para no tapar las salidas.
-   - La versión anterior (cierre «¿Qué pan estás buscando?» y bloque del servicio) está en `_backup v0.5 hablemos antes de unificar servicio/`.
 
 ## Vídeo provisional
 
@@ -137,7 +132,7 @@ La cabecera y el pie de `panes.html` y de la ficha son una copia de los de `inde
 
 ### `panes.html` · Elige tu pan (v0.2, simplificada)
 
-Versión más sencilla, tomando como referencia el catálogo de Europastry. La v0.1, con titular grande, entradas por ocasión y la pregunta «¿Tienes horno?», está guardada en `_backup v0.3 home antes de catalogo y ficha/panes-v0.1.html`.
+Versión más sencilla, tomando como referencia el catálogo de Europastry.
 
 - **Fondo blanco** y contenedor casi a sangre (márgenes de 16 a 48 px, sin ancho máximo).
 - **Sin hero:** migas, título «Elige tu pan» con el número de panes al lado, y a trabajar.
@@ -152,7 +147,7 @@ Dentro de un grupo de filtros se combinan con O y entre grupos con Y. El estado 
 
 ### `producto-barra-gourmet-ready.html` · Ficha (v0.3)
 
-**La ficha actual de okin.es con el sistema de diseño nuevo:** mismos textos, mismos datos y mismo orden, sobre fondo blanco y con una sola rejilla. Cada sección lleva su número y su título en la columna izquierda (3/12) y el contenido en la derecha (9/12), así nada cambia de sitio de un bloque a otro. Las versiones anteriores están en `_backup v0.5 ficha antes de simplificar/` (v0.1) y `_backup v0.6 ficha limpia antes de reordenar/` (v0.2, con el scroll que abría la barra).
+**La ficha actual de okin.es con el sistema de diseño nuevo:** mismos textos, mismos datos y mismo orden, sobre fondo blanco y con una sola rejilla. Cada sección lleva su número y su título en la columna izquierda (3/12) y el contenido en la derecha (9/12), así nada cambia de sitio de un bloque a otro.
 
 Archivos: la página, `assets/css/ficha.css` y `assets/js/ficha.js`. Los datos están en `assets/js/productos.js`.
 
@@ -191,7 +186,7 @@ Si se llega desde el recomendador (`?negocio=hosteleria&momento=desayuno…` o e
 
 ## Recomendador · Encontrar mi pan (v0.5)
 
-**Una pantalla por pregunta, fondo blanco y lo mínimo.** Las preguntas salen de la diapositiva 3 de *okin diseño*, pero se responden una a una hasta llegar a **una recomendación que lleva a su ficha**. La versión anterior, con las cuatro columnas a la vista, está en `_backup v0.4 recomendador columnas/`.
+**Una pantalla por pregunta, fondo blanco y lo mínimo.** Las preguntas salen de la diapositiva 3 de *okin diseño*, pero se responden una a una hasta llegar a **una recomendación que lleva a su ficha**.
 
 Archivos: `recomendador.html`, `assets/js/recomendador.js` y `assets/css/recomendador.css` (ya no usa `paginas.css`). Usa los 13 panes de `productos.js`.
 
